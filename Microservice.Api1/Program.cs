@@ -24,8 +24,12 @@ namespace Microservice.Api2
                 })
                 .ConfigureAppConfiguration((context, config) =>
                 {
+                    var env = context.HostingEnvironment;
+                    config.SetBasePath(env.ContentRootPath);
                     config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                     .AddJsonFile($"appsettings.{context.HostingEnvironment}.json", optional: true, reloadOnChange: true);
+                    config.AddEnvironmentVariables();
+                    config.AddCommandLine(args);
                 })
                 .ConfigureLogging((context, logging) =>
                 {
