@@ -3,13 +3,13 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "TopicName": "topic-development",
-    "Subscription1Name": "sub-development1",
-    "ServiceBusConnectionString": "Endpoint=sb://<servicebusnamespace>.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=LZcdgzzAfH0DtXyLZ41a/dPERZOOerjlQqmuizNiVKU=",
-    "AzureKeyVaultEndpoint": "https://<keyvault>.vault.azure.net/"
+    "MicroserviceTopic": "topic-microservice",
+    "Api2Subsciption": "subscription-api2",
+    "ServiceBusConnectionString": "Endpoint=sb://sb-development21.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=LZcdgzzAfH0DtXyLZ41a/dPERZOOerjlQqmuizNiVKU=",
+    "AzureKeyVaultEndpoint": "https://microsvc-func-keyvault.vault.azure.net/"
   },
   "AppConfiguration": {
-    "ApiBaseUrl": "http://localhost:7000/api/",
+    "ApiBaseUrl": "https://microservice-api2.azurewebsites.net/api/",
     "ApiController": "Employee",
     "ApiAction": "create"
   }

@@ -18,7 +18,7 @@ namespace Microservice.ServiceBusSubscription.DurableFunctions.SubscriptionClien
     {
 
         [FunctionName(Constants.Api2SubsciptionClientFunction)]
-        public async Task Run([ServiceBusTrigger("%TopicName%", "%Subscription1Name%", Connection = "ServiceBusConnectionString")] Message message, MessageReceiver messageReceiver, string lockToken, [DurableClient] IDurableOrchestrationClient client, ILogger logger)
+        public async Task Run([ServiceBusTrigger("%MicroserviceTopic%", "%Api2Subsciption%", Connection = "ServiceBusConnectionString")] Message message, MessageReceiver messageReceiver, string lockToken, [DurableClient] IDurableOrchestrationClient client, ILogger logger)
         {
             try
             {
