@@ -99,7 +99,7 @@ namespace Microservice.Api2
                     Title = "MicroserviceApi2 V1",
                     Description = "MicroserviceApi2 API Version 1",
                     TermsOfService = new Uri("https://docs.microsoft.com/"),
-                    Contact = new OpenApiContact() { Name = "Isaac", Email = "isaac@gmail.com" }
+                    Contact = new OpenApiContact() { Name = "Isaac", Email = "isaac.dotnetazure@gmail.com" }
                 });
             });
             return services;
@@ -110,6 +110,8 @@ namespace Microservice.Api2
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.DocumentTitle = "Microservice Api2 Swagger UI";
+                c.RoutePrefix = string.Empty;
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "MicroserviceApi2 V1");
                 c.DocExpansion(DocExpansion.None);
             });

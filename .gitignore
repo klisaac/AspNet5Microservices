@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Microservice.Api1/Properties/ServiceDependencies/microservice-api1 - Web Deploy
+*.json
